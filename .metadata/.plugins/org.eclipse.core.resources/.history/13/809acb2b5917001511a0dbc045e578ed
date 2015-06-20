@@ -1,0 +1,31 @@
+package ba.bitcamp.homeworkLectures2.task03;
+
+import ba.bitcamp.homeworkLectures2.task02.Author;
+
+public class Book extends Author {
+
+	public static final int ZERO = 0;
+	public static final int ONE = 0;
+	public static final int TWO = 0;
+	public static final int THREE = 0;
+
+	private String tittle;
+	private int price;
+	private int status;
+
+	/**
+	 * Constructor for creating Book objects
+	 */
+	public Book(String name, String mail, String gender, String tittle,
+			int price, int status) {
+		super(name, mail, gender);
+		if (status < 0 || status > THREE) {
+			throw new IllegalArgumentException(
+					"There can be minimal one and maximall three books!");
+		}
+		this.tittle = tittle;
+		this.price = price;
+		this.status = status;
+	}
+
+}

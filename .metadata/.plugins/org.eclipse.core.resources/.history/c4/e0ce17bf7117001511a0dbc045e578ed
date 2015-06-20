@@ -1,0 +1,83 @@
+package ba.bitcamp.homeworkLectures2.task04;
+
+import java.util.Arrays;
+
+import ba.bitcamp.homeworkLectures2.task03.Book;
+
+public class BookShop {
+
+	private String storeName;
+	private Book[] booksForSale;
+
+	/**
+	 * Constructor for creating BookStore objects
+	 * 
+	 * @param storeName
+	 *            store name
+	 * @param booksForSale
+	 *            array of books
+	 */
+	public BookShop(String storeName, Book[] booksForSale) {
+		super();
+		this.storeName = storeName;
+		this.booksForSale = booksForSale;
+	}
+
+	// Getters and Setters
+	public String getStoreName() {
+		return storeName;
+	}
+
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
+	}
+
+	public Book[] getBooksForSale() {
+		return booksForSale;
+	}
+
+	public void setBooksForSale(Book[] booksForSale) {
+		this.booksForSale = booksForSale;
+	}
+
+	/**
+	 * toString
+	 */
+	public String toString() {
+		String output = "";
+		output += "Book store name: " + storeName + "\n";
+		output += "Books for sale: " + Arrays.toString(booksForSale) + "\n";
+		return output;
+	}
+
+	// public boolean equals(BookStore other){
+	// if(other == null)
+	// return false;
+	// if ()
+	// }
+
+	public void addBook(Book b) {
+		Book[] array = new Book[booksForSale.length+1];
+		for (int i = 0; i < booksForSale.length; i++) {
+			array[i] = booksForSale[i];
+		}
+		for (int i = 0; i < booksForSale.length; i++) {
+			if (b.equals(booksForSale[i]) && booksForSale[i]!=null) {
+				if (booksForSale[i].getStatus() == Book.THREE) {
+					break;
+				} else {
+					booksForSale[i].setStatus(booksForSale[i].getStatus() + 1);
+					break;
+				}
+			}else if(booksForSale[i] == null){
+				booksForSale[i] = b;
+				break;
+			}else{
+				array[array.length-1]=b;
+				booksForSale = array;
+			}
+
+		}
+
+	}
+}

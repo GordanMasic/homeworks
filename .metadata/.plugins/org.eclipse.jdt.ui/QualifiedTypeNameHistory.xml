@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="ba.bitcamp.homeworkLectures2.task02.Author"/>
+<fullyQualifiedTypeName name="ba.bitcamp.homeworkLectures2.task03.Book"/>
+</qualifiedTypeNameHistroy>

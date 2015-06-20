@@ -1,0 +1,47 @@
+package ba.bitcamp.homeworkLectures2.task04;
+
+import ba.bitcamp.homeworkLectures2.task02.Author;
+import ba.bitcamp.homeworkLectures2.task03.Book;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		// Creating an array of books
+		Book[] books = new Book[3];
+
+		
+		// Creating books
+		Book bookOne = new Book("Mesa Selimovic", "mesa@bitcamp", "Male", "Fortress", 15, 0);
+		Book bookTwo = new Book("Ivo andric","ivo@bitcamp.ba","Male","The Bridge on the Drina", 12, 0);
+		Book bookThree = new Book("Joanne KAthleen Rowling","joane@bitcamp.ba","Female","Harry Potter", 20, 0);
+		Book bookFour = new Book("George R. R. Martin","george@bitcamp.ba","Male","Game of thrones", 50, 0);
+		
+
+		// Creating book-shop
+		BookStore bs = new BookStore("Bicamp", books);
+
+		// Adding books in the book-shop
+		bs.addBook(bookOne);
+		bs.addBook(bookThree);
+		bs.addBook(bookTwo);
+
+		// Selling books from the book-shop
+//		bs.sellBook(bookThree);
+//		bs.sellBook(bookOne);
+//		bs.sellBook(bookTwo);
+//
+//		// If there is no copy of the book in the book-shop, prints message
+//		bs.sellBook(bookOne);
+//
+//		// Printing all books from the book-shop
+//		bs.printBooks();
+//
+//		// Prints all books from inputed author
+//		bs.printBookFromAuthor(authorOne);
+
+	}
+
+	}
+
+

@@ -1,0 +1,73 @@
+package ba.bitcamp.homeworkLectures2.task02;
+
+public class Author {
+
+	private String name;
+	private String mail;
+	private String gender;
+
+	/**
+	 * Constructor for creating Author
+	 * 
+	 * @param name
+	 *            name of author
+	 * @param mail
+	 *            e-mail address
+	 * @param gender
+	 *            author gender
+	 */
+	public Author(String name, String mail, String gender) {
+		this.name = name;
+		this.mail = mail;
+		this.gender = gender;
+	}
+
+	// Getters and Setters
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	/**
+	 * Equals method
+	 * 
+	 * @param other
+	 *            Author other
+	 * @return true or false
+	 */
+	public boolean equals(Author other) {
+		if (other == null) {
+			return false;
+		}
+		if (this.name.equals(other.name) && this.gender.equals(other.gender)
+				&& this.mail.equals(other.mail)) {
+			return true;
+		}
+		return false;
+	}
+
+	public String toString() {
+		String output = String.format(
+				"Author name: %s \ne-mail: %s \nGender: %s\n", name, mail,
+				gender);
+	}
+}

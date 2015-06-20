@@ -1,0 +1,24 @@
+package ba.bitcamp.homeworkLectures2.task04;
+
+import ba.bitcamp.homeworkLectures2.task03.Book;
+
+public class BookStore {
+
+	private String storeName;
+	private Book[] booksForSale;
+
+	/**
+	 * Constructor for creating BookStore objects
+	 * 
+	 * @param storeName
+	 *            store name
+	 * @param booksForSale
+	 *            array of books
+	 */
+	public BookStore(String storeName, Book[] booksForSale) {
+		super();
+		this.storeName = storeName;
+		this.booksForSale = booksForSale;
+	}
+
+}
