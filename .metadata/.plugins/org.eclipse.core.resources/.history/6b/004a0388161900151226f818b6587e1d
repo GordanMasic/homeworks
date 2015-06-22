@@ -1,0 +1,16 @@
+package ba.bitcamp.homeworkWeekend5.task01;
+
+public class Character extends StoryElement {
+
+	private String characterGender;
+	private boolean isAlive;
+	private boolean isFit;
+
+	public Character(String name, String characterGender, boolean isFit) {
+		super(name);
+		this.characterGender = characterGender;
+		this.isAlive = true;
+		this.isFit = isFit;
+	}
+
+}

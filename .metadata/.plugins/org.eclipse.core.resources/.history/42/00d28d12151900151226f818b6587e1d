@@ -1,0 +1,14 @@
+package ba.bitcamp.homeworkWeekend5.task01;
+
+public class StoryElement {
+
+	private String name;
+	
+	public StoryElement(String name){
+		this.name = name;
+	}
+	
+	public StoryElement(){
+		this("STElement");
+	}
+}

@@ -1,0 +1,24 @@
+package ba.bitcamp.homeworkWeekend5.task01;
+
+public class StoryElement {
+
+	private String name;
+
+	/**
+	 * Constructor for creating StoryElement object by inputing parameter name
+	 * 
+	 * @param name
+	 *            name of story element
+	 */
+	public StoryElement(String name) {
+		this.name = name;
+	}
+
+	public StoryElement() {
+		this("STElement");
+	}
+
+	public String toString() {
+		return "Name: " + name + "\n";
+	}
+}

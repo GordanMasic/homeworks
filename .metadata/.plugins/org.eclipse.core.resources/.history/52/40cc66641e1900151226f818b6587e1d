@@ -1,0 +1,41 @@
+package ba.bitcamp.homeworkWeekend5.task03;
+
+import ba.bitcamp.homeworkWeekend5.task01.Character;
+import ba.bitcamp.homeworkWeekend5.task02.Goal;
+
+public class Protagonist extends Character {
+
+	private Goal goal;
+	public Character[] friends = new Character[3];
+	public Character enemy;
+
+	/**
+	 * Constructor for creating main actor in story using parameters name,
+	 * characterGender, isFit and goal
+	 * 
+	 * @param name
+	 *            name of character
+	 * @param characterGender
+	 *            character's gender
+	 * @param isFit
+	 *            is character fit
+	 * @param goal
+	 *            character's goal
+	 */
+	public Protagonist(String name, String characterGender, boolean isFit,
+			Goal goal) {
+		super(name, characterGender, isFit);
+		this.goal = goal;
+	}
+
+	/**
+	 * Creating main enemy
+	 * 
+	 * @param enemy
+	 *            character
+	 */
+	public void setEnemy(Character enemy) {
+		this.enemy = enemy;
+	}
+
+}

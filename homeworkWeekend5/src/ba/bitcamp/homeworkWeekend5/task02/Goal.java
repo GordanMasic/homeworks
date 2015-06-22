@@ -1,0 +1,61 @@
+package ba.bitcamp.homeworkWeekend5.task02;
+
+import ba.bitcamp.homeworkWeekend5.task01.StoryElement;
+import ba.bitcamp.homeworkWeekend5.task01.Character;
+
+public class Goal extends StoryElement {
+
+	public static final int EASY = 1;
+	public static final int NORMAL = 2;
+	public static final int HARD = 3;
+
+	private int level;
+	private String whatHappens;
+	private Character withWho;
+
+	/**
+	 * Constructor for creating Goal object using parameters
+	 * name,whatHappens,who and withWho
+	 * 
+	 * @param name
+	 *            name of goal
+	 * @param whatHappens
+	 *            name of event
+	 * @param toWho
+	 *            character whose goal it is
+	 * @param withWho
+	 *            character who is also actor of event
+	 */
+	public Goal(String name, int level, String whatHappens, Character withWho) {
+		super(name);
+		this.level = level;
+		this.whatHappens = whatHappens;
+		this.withWho = withWho;
+	}
+
+	// Getters and Setters
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
+	}
+
+	public String getWhatHappens() {
+		return whatHappens;
+	}
+
+	public void setWhatHappens(String whatHappens) {
+		this.whatHappens = whatHappens;
+	}
+
+	public Character getWithWho() {
+		return withWho;
+	}
+
+	public void setWithWho(Character withWho) {
+		this.withWho = withWho;
+	}
+
+}

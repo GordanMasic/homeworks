@@ -1,0 +1,45 @@
+package ba.bitcamp.homeworkWeekend5.task05;
+
+import ba.bitcamp.homeworkWeekend5.task02.Event;
+import ba.bitcamp.homeworkWeekend5.task02.Goal;
+import ba.bitcamp.homeworkWeekend5.task03.Protagonist;
+import ba.bitcamp.homeworkWeekend5.task01.Character;
+public class Main {
+
+	/*
+	 * This is a story of one young guy who has moved to new town and new highschool.
+	 * He used to be very problematic in his previous school and fought a lot because of his temperament.
+	 * He played football and was very good at that.
+	 */
+	Goal g1 = new Goal("Be good", Goal.HARD, null, null, null);
+	
+	Protagonist john = new Protagonist("John", "male", false, g1);
+	
+	/*
+	 * One day he meets one girl Candy at school and he falls in love. But the trouble is that she
+	 * has a very jealous boyfriend Harry. Harry saw them talking and there comes trouble.
+	 */
+	
+	Character candy = new Character("Candy", "female", true);
+	Character harry = new Character("Harry", "male", true);
+	
+	String ev1 = Event.LOVE;
+	
+	/*
+	 * Harry who is very good kickboxer has manipulated with Candy and told her to call John 
+	 * on his house party at sunday. On party Harry started fight with John and kicked his ass.
+	 * John went home very humiliated.
+	 */
+	
+	String ev2 = Event.MANIPULATION;
+	
+	/*
+	 * Next day at school John meets new friend Charley who suggests him to start train kickbox with him at 
+	 * near gym. John accepted that and started train hard.
+	 */
+	
+	String ev3 = Event.FRIENDSHIP;
+	
+	john.makeCharacterFit();
+	
+}
