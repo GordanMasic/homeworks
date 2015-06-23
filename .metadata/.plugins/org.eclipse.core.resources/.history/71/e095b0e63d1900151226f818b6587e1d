@@ -1,0 +1,47 @@
+package ba.bitcamp.homeworkPolymorphism;
+
+public class Geometry {
+
+	private double length;
+	private double width;
+
+	/**
+	 * Constructor for creating Geometry objects using parameters length and
+	 * width
+	 * 
+	 * @param length
+	 *            object length
+	 * @param width
+	 *            object width
+	 */
+	public Geometry(double length, double width) {
+		this.length = length;
+		this.width = width;
+	}
+
+	/**
+	 * Constructor for creating Geometry objects using parameter length. Used
+	 * for creating circles and squares
+	 * 
+	 * @param length
+	 *            object length
+	 */
+	public Geometry(double length) {
+		this.length = length;
+	}
+
+	/**
+	 * Method for checking if inputed value is positive and correct
+	 * 
+	 * @param value
+	 *            inputed value
+	 * @return true or false
+	 */
+	public boolean isCorrect(double value) {
+		if (value > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}

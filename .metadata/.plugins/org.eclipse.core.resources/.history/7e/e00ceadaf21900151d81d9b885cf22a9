@@ -1,0 +1,32 @@
+package ba.bitcamp.ObjectOrientedProgramming.task09;
+
+import ba.bitcamp.ObjectOrientedProgramming.task01.Computer;
+import ba.bitcamp.ObjectOrientedProgramming.task02.Network;
+import ba.bitcamp.ObjectOrientedProgramming.task06.Functionable;
+
+public class StartNetwork extends Network implements Functionable {
+
+	public StartNetwork(String networkName) {
+		super(networkName);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean isFunctioning() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void addComputer(Computer c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeComputer(Computer c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

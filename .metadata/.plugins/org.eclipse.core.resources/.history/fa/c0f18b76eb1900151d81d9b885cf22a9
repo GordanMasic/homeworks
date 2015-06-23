@@ -1,0 +1,39 @@
+package ba.bitcamp.ObjectOrientedProgramming.task02;
+
+import ba.bitcamp.ObjectOrientedProgramming.task01.Computer;
+
+public abstract class Network {
+
+	private String networkName;
+	private Computer[] computers;
+
+	/**
+	 * Constructor for creating Network objects
+	 * 
+	 * @param networkName
+	 *            name of network
+	 * @param computers
+	 *            array of computers
+	 */
+	public Network(String networkName) {
+		this.networkName = networkName;
+		this.computers = new Computer[0];
+	}
+
+	/**
+	 * Method for adding computers in network
+	 * 
+	 * @param c
+	 *            computer
+	 */
+	public abstract void addComputer(Computer c);
+
+	/**
+	 * Method for removing computer from network
+	 * 
+	 * @param c
+	 *            computer
+	 */
+	public abstract void removeComputer(Computer c);
+
+}

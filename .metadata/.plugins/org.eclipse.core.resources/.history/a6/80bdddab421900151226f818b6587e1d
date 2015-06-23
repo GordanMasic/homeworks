@@ -1,0 +1,84 @@
+package ba.bitcamp.homeworkPolymorphism;
+
+public class Geometry {
+
+	private double length;
+	private double width;
+	private double area;
+	private double perimeter;
+
+	/**
+	 * Constructor for creating Geometry objects using parameters length and
+	 * width
+	 * 
+	 * @param length
+	 *            object length
+	 * @param width
+	 *            object width
+	 */
+	public Geometry(double length, double width) {
+		if (isCorrect(length) == false) {
+			throw new IllegalArgumentException("Length must be positive!");
+		}
+		if (isCorrect(width) == false) {
+			throw new IllegalArgumentException("Width must be positive!");
+		}
+		this.length = length;
+		this.width = width;
+	}
+
+	/**
+	 * Constructor for creating Geometry objects using parameter length. Used
+	 * for creating circles and squares
+	 * 
+	 * @param length
+	 *            object length
+	 */
+	public Geometry(double length) {
+		if (isCorrect(length) == false) {
+			throw new IllegalArgumentException("Length must be positive!");
+		}
+		this.length = length;
+	}
+
+	/**
+	 * Method for checking if inputed value is positive and correct
+	 * 
+	 * @param value
+	 *            inputed value
+	 * @return true or false
+	 */
+	public boolean isCorrect(double value) {
+		if (value > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	// Getters
+	public double getArea() {
+		return area;
+	}
+
+	public double getPerimeter() {
+		return perimeter;
+	}
+	
+	public double getLength(){
+		return length;
+	}
+	
+	public double getWidth(){
+		return width;
+	}
+	
+	//Setters
+	public void setLength(double length){
+		this.length = length;
+	}
+	
+	public void setWidth(double width){
+		this.width = width;
+	}
+}

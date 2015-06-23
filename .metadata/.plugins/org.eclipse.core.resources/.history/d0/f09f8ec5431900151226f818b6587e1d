@@ -1,0 +1,14 @@
+package ba.bitcamp.homeworkPolymorphism;
+
+public class ComplexGeometry{
+
+	Geometry[] complexFigure = new Geometry[0];
+	
+	public void addFigure(Geometry g){
+		Geometry[] array = new Geometry[complexFigure.length + 1];
+		for (int i = 0; i < complexFigure.length; i++) {
+			array[i] = g;
+		}
+		complexFigure = array;
+	}
+}
