@@ -1,0 +1,67 @@
+package ba.bitcamp.homeworkWeekend5.task03;
+
+import ba.bitcamp.homeworkWeekend5.task01.Character;
+import ba.bitcamp.homeworkWeekend5.task02.Goal;
+
+public class Protagonist extends Character {
+
+	private Goal goal;
+	public Character[] friends = { null, null, null };
+	public Character enemy;
+
+	/**
+	 * Constructor for creating main actor in story using parameters name,
+	 * characterGender, isFit and goal
+	 * 
+	 * @param name
+	 *            name of character
+	 * @param characterGender
+	 *            character's gender
+	 * @param isFit
+	 *            is character fit
+	 * @param goal
+	 *            character's goal
+	 */
+	public Protagonist(String name, String characterGender, boolean isFit,
+			Goal goal) {
+		super(name, characterGender, isFit);
+		this.goal = goal;
+	}
+
+	/**
+	 * Creating main enemy
+	 * 
+	 * @param enemy
+	 *            character
+	 */
+	public void setEnemy(Character enemy) {
+		this.enemy = enemy;
+	}
+
+	public static final int COUNTER = 4;
+
+	int counter = 0;
+
+	/**
+	 * Method for adding allies of main character
+	 * 
+	 * @param c
+	 *            ally character
+	 */
+	public void addFriend(Character c) {
+		counter++;
+		if (counter >= COUNTER) {
+			throw new IndexOutOfBoundsException(
+					"Main character has already enough allies!");
+		}
+		for (int i = 0; i < friends.length; i++) {
+			if (friends[i] == null) {
+				friends[i] = c;
+			}
+		}
+	}
+	
+	public void attainGoal(){
+		if(this)
+	}
+}

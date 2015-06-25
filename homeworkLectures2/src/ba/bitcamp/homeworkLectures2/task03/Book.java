@@ -1,0 +1,102 @@
+package ba.bitcamp.homeworkLectures2.task03;
+
+import ba.bitcamp.homeworkLectures2.task02.Author;
+
+public class Book {
+
+
+	/*
+	 * Declaring properties of book.
+	 */
+	private String name;
+	private double price;
+	private int status;
+	private Author author;
+
+	public static final int MAX_BOOKS = 3;
+	public static final int MIN_BOOKS = 0;
+
+	/**
+	 * Constructor
+	 * 
+	 * @param name
+	 *            - Name of the book.
+	 * @param price
+	 *            - Price of the book.
+	 * @param status
+	 *            - Status in the book-shop.
+	 * @param author
+	 *            - Name of the author.
+	 */
+	public Book(String name, double price, int status, Author author) {
+		this.name = name;
+		this.price = price;
+		this.status = status;
+		this.author = author;
+	}
+
+	/**
+	 * Prints information about the book
+	 */
+	public String toString() {
+		String s = "";
+		s += "Name: " + name + "\n";
+		s += "Price: " + price + "\n";
+		s += "Status: " + status + "\n";
+		s += "Author: " + author.getName() + "\n";
+
+		return s;
+	}
+
+	/**
+	 * Checkis if the two books are equal.
+	 * 
+	 * @param b
+	 *            - Book which we compare to the first book.
+	 * @return True if the books are equal and false if not.
+	 */
+	public boolean equal(Book b) {
+		return this.name.equals(b.name) && this.price == b.price
+				&& this.author.getName().equals(b.author.getName());
+	}
+
+	/*
+	 * Get and set methods
+	 */
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public Author getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(Author author) {
+		this.author = author;
+	}
+
+	public void setStatus(int status) {
+		this.status += status;
+		if (this.status > MAX_BOOKS) {
+			System.out.println("Can't add more books!");
+		} else if (this.status < MIN_BOOKS) {
+			System.out.println("There is no book in the shop!");
+		}
+	}
+}

@@ -1,0 +1,80 @@
+package ba.bitcamp.homeworkWeekend5.task05;
+
+import java.util.Arrays;
+
+import ba.bitcamp.homeworkWeekend5.task02.Event;
+import ba.bitcamp.homeworkWeekend5.task02.Goal;
+import ba.bitcamp.homeworkWeekend5.task03.Protagonist;
+import ba.bitcamp.homeworkWeekend5.task01.Character;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		/*
+		 * This is a story of one young guy who has moved to new town and new
+		 * highschool. He used to be very problematic in his previous school and
+		 * fought a lot because of his temperament. He played football and was
+		 * very good at that.
+		 */
+		Goal g1 = new Goal("Be good", Goal.HARD, null, null);
+
+		Protagonist john = new Protagonist("John", "male", false, g1);
+
+		/*
+		 * One day he meets one girl Candy at school and he falls in love. But
+		 * the trouble is that she has a very jealous boyfriend Harry. Harry saw
+		 * them talking and there comes trouble.
+		 */
+
+		Character candy = new Character("Candy", "female", true);
+		Character harry = new Character("Harry", "male", true);
+
+		String ev1 = Event.LOVE;
+
+		/*
+		 * Harry who is very good kickboxer has manipulated with Candy and told
+		 * her to call John on his house party at sunday. On party Harry started
+		 * fight with John and kicked his ass. John went home very humiliated.
+		 */
+
+		john.setEnemy(harry);
+		String ev2 = Event.MANIPULATION;
+
+		/*
+		 * Next day at school John meets new friend Charley who suggests him to
+		 * start train kickbox with him at near gym. John accepted that and
+		 * started train hard. John meets two new friends at gym Joe and Richie.
+		 */
+
+		john.makeCharacterFit();
+		Character charley = new Character("Charley", "male", false);
+		Character joe = new Character("Joe", "male", true);
+		Character richie = new Character("Richie", "male", true);
+		String ev3 = Event.FRIENDSHIP;
+
+		/*
+		 * Few months after there was tournament in kickboxing and John and his
+		 * friends decide to participate. Tournament was organized by Harry and
+		 * fighter who passes qualifications fights with Harry in final. All of
+		 * them passed qualifications and fought Harry.
+		 */
+
+		Goal g2 = new Goal("Revenge", Goal.NORMAL, "Fight", harry);
+
+		john.addFriend(joe);
+		john.addFriend(richie);
+		john.addFriend(charley);
+
+		john.setGoal(g2);
+		john.attainGoal();
+
+		System.out.println(Arrays.toString(john.getFriends()));
+		System.out.println(charley.isFit());
+
+		/*
+		 * John got his revenge. He defeated Harry and won Candy's hearth and
+		 * Harry's respect. THE END
+		 */
+	}
+}
