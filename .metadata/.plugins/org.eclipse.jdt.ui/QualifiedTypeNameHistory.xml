@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="ba.bitcamp.homeworkLectures2.task02.Author"/>
 <fullyQualifiedTypeName name="ba.bitcamp.homeworkLectures2.task03.Book"/>
+<fullyQualifiedTypeName name="ba.bitcamp.homeworkWeekend5.task01.StoryElement"/>
+<fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="ba.bitcamp.homeworkWeekend5.task02.Event"/>
+<fullyQualifiedTypeName name="ba.bitcamp.homeworkWeekend5.task03.Protagonist"/>
+<fullyQualifiedTypeName name="ba.bitcamp.homeworkWeekend5.task02.Goal"/>
+<fullyQualifiedTypeName name="ba.bitcamp.homeworkWeekend5.task01.Character"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="ba.bitcamp.homeworkPolymorphism.Circle"/>
 </qualifiedTypeNameHistroy>
