@@ -1,0 +1,7 @@
+package ba.bitcamp.homeworkWeekend6.task03;
+
+import javax.swing.JFrame;
+
+public class Task3 extends JFrame {
+
+}

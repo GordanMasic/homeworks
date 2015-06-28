@@ -1,0 +1,90 @@
+package ba.bitcamp.homeworkWeekend6.task02;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Task2 extends JFrame {
+
+	private static final long serialVersionUID = 4250920874456022561L;
+
+	// Creating buttons
+	private JButton nameButton = new JButton("Name");
+	private JButton lastNameButton = new JButton("Last name");
+	private String name = "A";
+	private String lastName = "A";
+	private JLabel label1 = new JLabel();
+	private int counterName = 0;
+	private int counterLastName = 0;
+
+	String[] names = new String[3];
+
+	public Task2() {
+		setLayout(new BorderLayout());
+
+		for (int i = 0; i < names.length; i++) {
+			names[i] = "" + (char) (i + 65);
+		}
+		label1.setText("Name " + name + " Last name " + lastName);
+		label1.setHorizontalAlignment(JLabel.CENTER);
+		add(label1);
+		nameButton.addActionListener(new generateName());
+		lastNameButton.addActionListener(new generateLastName());
+		add(nameButton, BorderLayout.WEST);
+		add(lastNameButton, BorderLayout.EAST);
+		setTitle("Generator for name and last name");
+		setSize(400, 300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+
+	private class generateName implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if (counterName <= 2) {
+				if (e.getSource() == nameButton) {
+					counterName++;
+					if (counterName == 3) {
+						counterName = 0;
+					}
+					name = names[counterName];
+
+					label1.setText("Name " + name + " Last name " + lastName);
+				}
+
+			}
+
+		}
+
+	}
+
+	private class generateLastName implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if (counterLastName <= 2) {
+				if (e.getSource() == lastNameButton) {
+					counterLastName++;
+					if (counterLastName == 3) {
+						counterLastName = 0;
+					}
+					lastName = names[counterLastName];
+
+					label1.setText("Name " + name + " Last name " + lastName);
+				}
+
+			}
+
+		}
+
+	}
+
+	public static void main(String[] args) {
+		new Task2();
+	}
+}

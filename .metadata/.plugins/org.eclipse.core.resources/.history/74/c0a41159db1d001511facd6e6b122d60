@@ -1,0 +1,110 @@
+package ba.bitcamp.homeworkWeekend6.task04;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Task4 extends JFrame {
+
+	private static final long serialVersionUID = -4752987736569773758L;
+
+	JButton leftButton = new JButton("<");
+	JButton rightButton = new JButton(">");
+	private char letter = 'a';
+	JButton characterButton = new JButton("Char: " + letter);
+	JButton insertButton = new JButton("Insert character");
+	JLabel label = new JLabel("_");
+
+	public Task4() {
+
+		setLayout(new BorderLayout());
+
+		label.setHorizontalAlignment(JLabel.CENTER);
+
+		add(label);
+		add(rightButton, BorderLayout.EAST);
+		add(leftButton, BorderLayout.WEST);
+		add(characterButton, BorderLayout.NORTH);
+		add(insertButton, BorderLayout.SOUTH);
+
+		// rightButton.addActionListener(new Action(0));
+		leftButton.addActionListener(new Action1());
+		insertButton.addActionListener(new Action2());
+		characterButton.addActionListener(new Action3());
+
+		setLocationRelativeTo(null);
+		setTitle("Task4");
+		setSize(400, 300);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+
+	}
+
+	private class Action3 implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+
+			int numC = (int) ((Math.random() * 25) + 97);
+			letter = (char) (numC);
+			characterButton.setText("Char: " + letter);
+		}
+
+	}
+
+	private class Action2 implements ActionListener {
+		private int counter = 0;
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			for (int i = 0; i < label.getText().length(); i++) {
+				if (label.getText().charAt(i) == '_') {
+					counter = i;
+				}
+			}
+
+			if (counter > 0) {
+				label.setText(label.getText().substring(0, counter)
+						+ characterButton.getText().charAt(6)
+						+ "_"
+						+ label.getText().substring(counter + 1,
+								label.getText().length()));
+			} else {
+				label.setText(characterButton.getText().charAt(6)
+						+ "_"
+						+ label.getText().substring(counter + 1,
+								label.getText().length()));
+
+			}
+		}
+	}
+
+	private class Action1 implements ActionListener {
+		private char cursor = '_';
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+			for (int i = label.getText().length() - 1; i > 0; i--) {
+				if (label.getText().charAt(i) == cursor) {
+					if (i == label.getText().length() - 1) {
+						label.setText(label.getText().substring(0, i-1)
+								+ cursor + label.getText().charAt(i-1));
+					} else {
+						label.setText(label.getText().substring(0, i-1)
+								+ cursor +label.getText().charAt(i-1) + label.getText().substring(i+1));
+					}
+				}
+			}
+		}
+
+	}
+
+	public static void main(String[] args) {
+		new Task4();
+	}
+}

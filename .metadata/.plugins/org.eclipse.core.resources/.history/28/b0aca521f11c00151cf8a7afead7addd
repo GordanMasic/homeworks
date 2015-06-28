@@ -1,0 +1,88 @@
+package ba.bitcamp.homeworkWeekend6.task02;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Arrays;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Task2 extends JFrame {
+
+	private JButton nameButton = new JButton("Name");
+	private JButton lastNameButton = new JButton("Last name");
+	private String name = "";
+	private String lastName = "";
+	private JLabel label1 = new JLabel();
+	private int counterName = 0;
+	private int counterLastName = 0;
+
+	String[] names = new String[3];
+
+	public Task2() {
+		setLayout(new BorderLayout());
+
+		for (int i = 0; i < names.length; i++) {
+			names[i] = "" + (char) (i + 65);
+		}
+		System.out.println(Arrays.toString(names));
+
+		label1.setHorizontalAlignment(JLabel.CENTER);
+		add(label1);
+		nameButton.addActionListener(new generateName());
+		lastNameButton.addActionListener(new generateLastName());
+		add(nameButton, BorderLayout.WEST);
+		add(lastNameButton, BorderLayout.EAST);
+		setTitle("Generator for name and last name");
+		setSize(400, 300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+
+	private class generateName implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if (counterName <= 2) {
+				if (e.getSource() == nameButton) {
+
+					name = names[counterName];
+					counterName++;
+					label1.setText("Name " + name + " Last name " + lastName);
+				}
+
+			}
+			if (counterName == 3) {
+				counterName = 0;
+			}
+		}
+
+	}
+
+	private class generateLastName implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if (counterLastName <= 2) {
+				if (e.getSource() == lastNameButton) {
+
+					lastName = names[counterLastName];
+					counterLastName++;
+					label1.setText("Name " + name + " Last name " + lastName);
+				}
+
+			}
+			if (counterLastName == 3) {
+				counterLastName = 0;
+			}
+		}
+
+	}
+
+	public static void main(String[] args) {
+		new Task2();
+	}
+}

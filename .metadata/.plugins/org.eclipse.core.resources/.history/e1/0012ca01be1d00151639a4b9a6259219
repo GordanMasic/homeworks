@@ -1,0 +1,30 @@
+package ba.bitcamp.homeworkWeekend6.task05;
+
+public class Task5 {
+
+	public static double getPower(double number, int exponent) {
+		double product = 0;
+
+		if (exponent > 0) {
+			if (exponent == 1) {
+				return number;
+			}
+			return number * getPower(number, exponent - 1);
+		}
+		if (exponent < 0) {
+			if (exponent == -1) {
+				return number;
+			}
+			return  number * getPower(number, exponent+1);
+		} else {
+			return 1;
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(getPower(-2, -3));
+	}
+
+}

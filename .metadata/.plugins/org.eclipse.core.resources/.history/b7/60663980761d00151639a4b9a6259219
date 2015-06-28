@@ -1,0 +1,11 @@
+package ba.bitcamp.homeworkWeekend6.task03;
+
+import javax.swing.JFrame;
+
+public class Task3 extends JFrame {
+
+	private static final long serialVersionUID = -8870748513752457769L;
+	
+	
+
+}

@@ -1,0 +1,47 @@
+package ba.bitcamp.homeworkWeekend6.task06;
+
+public class Task6 {
+
+	public static void fillArray(int[][] matrix) {
+
+		fillArray(matrix, 0, 0, 0);
+
+	}
+
+	public static void fillArray(int[][] matrix, int i, int j, int num) {
+		if (i == matrix.length) {
+			return;
+		}
+		if (i < matrix.length) {
+			if (j == matrix[i].length) {
+				return;
+			}
+			if (j < matrix[i].length) {
+				matrix[i][j] = num;
+				j++;
+				num++;
+				fillArray(matrix, i, j, num);
+			}
+			i++;
+			System.out.println(num);
+			num++;
+			j = 0;
+			fillArray(matrix, i, j, num);
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		//Making matrix
+		int[][] matrix = new int[2][6];
+		fillArray(matrix);
+
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				System.out.print(matrix[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+}

@@ -1,0 +1,58 @@
+package ba.bitcamp.homeworkWeekend6.task03;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Task3 extends JFrame {
+
+	private static final long serialVersionUID = -8870748513752457769L;
+
+	private JButton[] buttons = new JButton[10];
+
+	private int[] numbers = new int[5];
+
+	public Task3() {
+		// >>>>>>Creating window<<<<<<<
+
+		// Creating window with grid of buttons 9X1
+		setLayout(new GridLayout(2, 5, 5, 5));
+
+		// Creating buttons
+		for (int i = 0; i < buttons.length; i++) {
+			buttons[i] = new JButton(i + "");
+
+			add(buttons[i]);
+		}
+
+		// Window configuration
+		setTitle("Generator for three digit number");
+		setSize(400, 300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+
+	private class Action implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			for (int j = 0; j < buttons.length; j++) {
+				for (int i = 0; i < buttons.length; i++) {
+					if (i < buttons.length / 2) {
+						if (e.getSource() == buttons[i]) {
+							numbers[j] = i;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		new Task3();
+	}
+}
