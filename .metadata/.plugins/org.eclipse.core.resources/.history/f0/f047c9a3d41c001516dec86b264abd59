@@ -1,0 +1,65 @@
+package ba.bitcamp.homeworkWeekend6.task01;
+
+import java.applet.Applet;
+import java.awt.GridLayout;
+
+
+
+
+import java.awt.LayoutManager;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Task1 extends JFrame{
+
+	private static final long serialVersionUID = -2743244957814182622L;
+	
+	GridLayout window = new GridLayout(9,9);
+	JButton button1 = new JButton();
+	JButton button2 = new JButton();
+	JButton button3 = new JButton();
+	JButton button4 = new JButton();
+	JButton button5 = new JButton();
+	JButton button6 = new JButton();
+	JButton button7 = new JButton();
+	JButton button8 = new JButton();
+	JButton button9 = new JButton();
+	JButton[] buttons = new JButton[9];
+	String[] textOnButtons = new String[]{"1","2","3","4","5","6","7","8","9"};
+	
+	private int counter = 0;
+	private int number = 0;
+	private int base = 100;
+	
+	public Task1(){
+		
+		setTitle("Generator for three digit number");
+		setSize(400,300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+		add(button1);
+		add(button2);
+		add(button3);
+		add(button4);
+		add(button5);
+		add(button6);
+		add(button7);
+		add(button8);
+		add(button9);
+		
+		
+		
+}
+
+	
+	public static void main(String[] args) {
+
+		new Task1();
+
+	}
+
+}

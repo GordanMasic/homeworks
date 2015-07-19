@@ -1,0 +1,10 @@
+package ba.bitcamp.homeworkWeekend6.task02;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Task2 extends JFrame {
+
+	private JButton nameButton = new JButton("Name");
+	private JButton lastNameButton = new JButton("Last name");
+}

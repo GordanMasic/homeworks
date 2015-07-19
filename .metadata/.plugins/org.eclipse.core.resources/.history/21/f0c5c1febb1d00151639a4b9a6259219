@@ -1,0 +1,35 @@
+package ba.bitcamp.homeworkWeekend6.task05;
+
+public class Task5 {
+
+	public static double getPower(double number, int exponent) {
+		if (exponent > 0) {
+			if (exponent == 1) {
+
+				return number;
+			}
+			return number * getPower(number, exponent - 1);
+		}
+		double product;
+		if (exponent < 0) {
+
+			if (exponent == -1) {
+
+				return number;
+			}
+			exponent++;
+			 product = number * getPower(number, exponent);
+		}else{
+			return 1;
+		}
+			
+		return (product/product)/16;	
+		
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(getPower(-2, -3));
+	}
+
+}
