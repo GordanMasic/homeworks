@@ -6,6 +6,10 @@ package ba.bitcamp.homeworkLecturesW09D01;
 public class SortedIntList {
 	private Node start;
 
+	public SortedIntList() {
+		this.start = null;
+	}
+
 	/**
 	 * Ubacuje broj u listu, èuvajuæi listu sortiranom.
 	 * <p>
@@ -19,29 +23,24 @@ public class SortedIntList {
 
 		if (start == null) {
 			start = newNode;
+		}  else if (start.getValue() >= n) {
+			newNode.setNext(start);
+			start = newNode;
 		} else {
 			Node temp = start;
-
 			while (temp.getNext() != null) {
-				if (n > temp.getNext().getValue()) {
+				if (temp.getNext().getValue() < n) {
 					temp = temp.getNext();
 				} else {
 					break;
 				}
-
 			}
-			if (temp == start && n > temp.getValue()) {
-				start.setNext(newNode);
-
-			} else if (temp == start && n < temp.getValue()) {
-				newNode.setNext(temp);
-				start = newNode;
+			if (temp.getNext() == null) {
+				temp.setNext(newNode);
 			} else {
-				Node temp2 = temp.getNext();
-				newNode.setNext(temp2);
+				newNode.setNext(temp.getNext());
 				temp.setNext(newNode);
 			}
-
 		}
 	}
 
@@ -73,7 +72,6 @@ public class SortedIntList {
 		return temp;
 	}
 
-
 	/**
 	 * Vraæa dužinu liste
 	 * <p>
@@ -85,12 +83,7 @@ public class SortedIntList {
 	 * @return dužina liste
 	 */
 	public int getLength() {
-		Node temp = start;
-		if (temp.getNext() == null) {
-			return 0;
-		}
-
-		return getLength(temp);
+		return getLength(start);
 
 	}
 
@@ -115,12 +108,18 @@ public class SortedIntList {
 		Node temp = start;
 		for (int i = 0; i < result.length; i++) {
 			result[i] = temp.getValue();
-			if (temp.getNext() != null) {
-				temp = temp.getNext();
-			}
+			temp = temp.getNext();
+
 		}
 
 		return result;
+	}
+
+	public String toString() {
+		if (start == null) {
+			return "List is empty!";
+		}
+		return start.toString();
 	}
 
 	private class Node {
