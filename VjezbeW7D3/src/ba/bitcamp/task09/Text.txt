@@ -1,0 +1,20 @@
+Ulazi kinez u radnju i rece:
+"Ja htjeti kupiti pedigre pal za moj pas." 
+Prodavac rece:
+"Necu ti prodati pedigre dok mi ne dovedes psa."
+Dolazi kinez sljedeci dan sa psom i ovaj mu proda pedigre.
+Dolazi kinez opet sljedeci dan i kaze: 
+"Ja htjeti kupiti wiskas za moja macka."
+Prodavac odgovori:
+"Necu ti prodati wiskas dok mi ne dovedes macku."
+Dovodi mu kinez macku i prodavac mu proda wiskas.
+Dolazi kinez opet ali ovaj put sa plasticnom kesom u ruci i kaze: 
+"Ti staviti ruka u kesa!" 
+I prodavac stavi ruku u kesu. 
+Pita kinez:
+"Mekano?"
+"Jeste."
+"Toplo?"
+"Jeste."
+Rece kinez: 
+"Ja htjeti kupiti toaletni papir!"
