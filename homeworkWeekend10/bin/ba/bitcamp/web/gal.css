@@ -1,0 +1,32 @@
+html{
+	background-image: url("http://tiger.towson.edu/~oagunl1/manchester_united_7_1600x1200.jpg");
+	background-repeat: no-repeat;
+	width: auto;
+	background-color: red;
+	display: flex;
+}
+.lists li{
+	font-size: 30px;
+	display: inline;
+	font-family: cursive;
+	margin-bottom: 50px;
+}
+.lists a{
+	text-decoration: none;
+	color: white;
+	margin: 10px 40px 10px 40px
+}
+.season2015 td{
+	margin: 0;
+	padding: 0;
+	border: 2px solid black;
+	text-align: center;
+	color: white;
+	font-size: 26px;
+	display: inline-block;
+}
+.season2015 img{
+	height: 250px;
+	margin: 0;
+	padding: 0;
+}

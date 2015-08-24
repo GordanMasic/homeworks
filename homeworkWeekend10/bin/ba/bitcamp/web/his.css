@@ -1,0 +1,53 @@
+html{
+	background-image: url("http://newartcolorz.com/images/united-wallpaper/kartandtinki1_united-wallpaper_03.jpg");
+	background-repeat: no-repeat;
+	width: auto;
+	display: inline-block;
+}
+.lists li{
+	font-size: 30px;
+	display: inline;
+	font-family: cursive;
+}
+.lists a{
+	text-decoration: none;
+	color: white;
+	margin: 10px 40px 10px 40px
+}
+
+.history1{
+	width: 50%
+}
+
+.history1 h1{
+	color: white;
+	text-align: center;
+}
+
+.history1 h2{
+	color: white;
+	font-style: bold;
+}
+
+.history1 p{
+	color:white;
+}
+
+
+.history2{
+	width: 50%
+}
+
+.history2 h1{
+	color: white;
+	text-align: center;
+}
+
+.history2 h2{
+	color: white;
+	font-style: bold;
+}
+
+.history2 p{
+	color:white;
+}

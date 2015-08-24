@@ -1,0 +1,82 @@
+html{
+	background-color: #AB0909;
+	display:inline-block;
+}
+.lists li{
+	font-size: 30px;
+	display: inline;
+	font-family: cursive;
+}
+.lists a{
+	text-decoration: none;
+	color: white;
+	margin: 10px 50px 10px 40px
+}
+
+.dreamTeather{
+	text-align: center;
+}
+
+.dreamTeather img{
+	width: 100%;
+}
+.standings{
+	width: 19%;
+	margin-right: 20px;
+}
+.standings td{
+	text-align: center;
+	font-size: 14px;
+	color: white;
+	margin: 0;
+	border: 1px solid white;
+}
+.standings p{
+	color: white;
+	text-align: center;
+}
+
+.intro{
+	width: 60%;
+}
+.intro h1{
+	color: white;
+	text-align: center;
+	width: 100%;
+
+}
+
+.memphis{
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+.memphis img{
+	width: 50%;
+	float: left;
+	margin-right:5px; 
+} 
+
+.memphis h2{
+	width: 100%;
+	text-align: center;
+}
+
+.memphis p{
+	text-align: justify;
+}
+
+.bigDiv{
+	display: flex;
+}
+
+.commercials{
+	width: 20%;
+	display: block;
+	margin-left: 10px;
+	padding: 0;
+}
+
+.commercials img{
+	width: 100%;
+}
